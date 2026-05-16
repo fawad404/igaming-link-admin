@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand */
+  --color-primary: #FF6A00;
+  --color-secondary: #080F1E;
+
+  /* Admin UI */
+  --color-admin-bg: #F4F6F9;
+  --color-admin-sidebar: #0F172A;
+  --color-admin-sidebar-hover: #1E293B;
+  --color-admin-card: #FFFFFF;
+  --color-admin-border: #E2E8F0;
+
+  /* Text */
+  --color-text-main: #0F172A;
+  --color-text-muted: #9EAABE;
+  --color-text-gray: #A6A6A6;
+
+  /* Status colors */
+  --color-success: #16A34A;
+  --color-warning: #F59E0B;
+  --color-danger: #DC2626;
+  --color-info: #3B82F6;
+
+  /* Content workflow state colors */
+  --color-state-imported: #6B7280;
+  --color-state-draft: #3B82F6;
+  --color-state-review: #F59E0B;
+  --color-state-approved: #8B5CF6;
+  --color-state-published: #16A34A;
+  --color-state-archived: #9CA3AF;
+
+  /* Font */
+  --font-sans: var(--font-montserrat), sans-serif;
+}
+
+body {
+  background-color: var(--color-admin-bg);
+  color: var(--color-text-main);
+  font-family: var(--font-montserrat);
+}
+
+
+.border1 {
+  border: 1px solid red;
+}
+
+/* global.css or component CSS */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  /* IE 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.sidebarAnimation {
+  animation: sidebarAnimation 0.8s forwards;
+  width: 256px;
+}
+
+@keyframes sidebarAnimation {
+  0% {
+    width: 0px;
+  }
+
+  50% {
+    width: 270px;
+  }
+
+  100% {
+    width: 256px;
+  }
+}
